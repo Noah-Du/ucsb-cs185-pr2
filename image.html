@@ -16,6 +16,14 @@
 </head>
 
 <body>
+<h1>Alaska.</h1><br>
+<p>
+        These pictures are taken in Alaska when last spring vacation. I and 
+        my high school friends took a self-driving tour from Anchorage to 
+        Fairbanks to see the aurora. These photos contain my most valuable 
+        memory for my undergraduate life.
+</p><br>
+
 
 <div class="grid-container">
     <div class="grid-content"><img src="i1.png" width="300" height="200"></div>
@@ -28,7 +36,32 @@
     <div class="grid-content"><img src="i8.JPG" width="300" height="200"></div>
     <div class="grid-content"><img src="i9.JPG" width="300" height="200"></div>
 </div>
-    
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 </body>
+
+<script>
+
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+</script>
 
 </html>
