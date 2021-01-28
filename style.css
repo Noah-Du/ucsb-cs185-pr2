@@ -26,6 +26,7 @@
   color: white;
 }
 
+/*
 .grid-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -36,6 +37,20 @@
   padding: 1px;
   font-size: 30px;
   text-align: center;
+}
+*/
+
+.watch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 660px) {
+  .aka {
+    justify-content: center;
+  }
 }
 
 h1 {
