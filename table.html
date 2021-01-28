@@ -4,7 +4,16 @@
     
 <head>
 
+<title>CMPSC185 PA2 Junyi Du</title>
+
 <link rel="stylesheet" href="style.css" >
+
+
+</head>
+
+
+<body>
+
 <div class="topnav">
     <a href="text.html">Text</a>
     <a href="image.html">Image</a>
@@ -13,25 +22,10 @@
     <a href="email.html">Email</a>
 </div>
 
-<style>
-    table, th, td {
-        border: 1px solid black;
-    }
-    table.center {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    th {
-        text-align: left;
-    }
-</style>
+<h1>Projects</h1><br>
+<p>Junyi Du's Projects Lists</p><br>
 
-</head>
-
-<body>
-
-<h1>Projects</h1>
-
+<section id="table">
 <table class="center">
     <tr>
         <th>Name</th>
@@ -54,16 +48,34 @@
         <td>2020</td>
     </tr>
 </table>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+    table.center {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 5px;
+    }
+    th {
+        text-align: left;
+    }
+
+</style>
+</section>
+
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     
 </body>
 
+
+
 <script>
 
     mybutton = document.getElementById("myBtn");
     
-    // When the user scrolls down 20px from the top of the document, show the button
+    
     window.onscroll = function() {scrollFunction()};
     
     function scrollFunction() {
@@ -74,10 +86,10 @@
       }
     }
     
-    // When the user clicks on the button, scroll to the top of the document
+    
     function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      document.body.scrollTop = 0; 
+      document.documentElement.scrollTop = 0; 
     }
     
     </script>

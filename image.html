@@ -4,19 +4,22 @@
     
 <head>
 
+<title>CMPSC185 PA2 Junyi Du</title>
+
 <link rel="stylesheet" href="style.css" >
-<div class="topnav">
-    <a href="text.html">Text</a>
-    <a class="active" href="image.html">Image</a>
-    <a href="video.html">Video</a>
-    <a href="table.html">Table</a>
-    <a href="email.html">Email</a>
-</div>
+
 
 </head>
 
 <body>
 
+<div class="topnav">
+  <a href="text.html">Text</a>
+  <a class="active" href="image.html">Image</a>
+  <a href="video.html">Video</a>
+  <a href="table.html">Table</a>
+  <a href="email.html">Email</a>
+</div>
 
 <h1>Alaska.</h1><br>
 
@@ -42,19 +45,19 @@
 -->
 <div class="row">
     <div class="column">
-        <img src="i1.png">
-        <img src="i2.JPG">
-        <img src="i3.JPG">
+        <img src="i1.png" onclick="overlayImg(this)">
+        <img src="i2.JPG" onclick="overlayImg(this)">
+        <img src="i3.JPG" onclick="overlayImg(this)">
     </div>
     <div class="column">
-        <img src="i4.JPG">
-        <img src="i5.JPG">
-        <img src="i6.JPG">
+        <img src="i4.JPG" onclick="overlayImg(this)">
+        <img src="i5.JPG" onclick="overlayImg(this)">
+        <img src="i6.JPG" onclick="overlayImg(this)">
     </div>
     <div class="column">
-        <img src="i7.JPG">
-        <img src="i8.JPG">
-        <img src="i9.JPG">
+        <img src="i7.JPG" onclick="overlayImg(this)">
+        <img src="i8.JPG" onclick="overlayImg(this)">
+        <img src="i9.JPG" onclick="overlayImg(this)">
     </div>
     <!--
     <div class="column">
@@ -67,13 +70,20 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+<div id="modal" class="modal" onclick="this.style.display='none'">
+    <span class='close'>&times;</span>
+    <div class="modal-center">
+      <img id="overlay_img" onclick="event.stopPropagation();" style="max-width:100%">
+    </div>
+</div>
+
 </body>
 
 <script>
 
 mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -84,12 +94,21 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
 }
 
+function overlayImg(element){
+    document.getElementById("overlay_img").src = element.src;
+    document.getElementById("modal").style.display = "block";
+}
+
+function overlayOff(){
+    document.getElementById("overlay_vid").pause();
+    document.getElementById("modal").style.display = "none";
+}
 </script>
 
 </html>
