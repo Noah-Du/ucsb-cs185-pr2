@@ -4,13 +4,10 @@
     
 <head>
 
+<title>CMPSC185 PA2 Junyi Du</title>
+
 <link rel="stylesheet" href="style.css" >
-<div class="topnav">
-    <a class="active" href="text.html">Text</a>
-    <a href="image.html">Image</a>
-    <a href="video.html">Video</a>
-    <a href="table.html">Table</a>
-</div>
+
 
 <style>
     input[type=text] {
@@ -24,6 +21,14 @@
 
 <body>
 
+<div class="topnav">
+  <a class="active" href="text.html">Text</a>
+  <a href="image.html">Image</a>
+  <a href="video.html">Video</a>
+  <a href="table.html">Table</a>
+  <a href="email.html">Email</a>
+</div>
+
 <form>
     <br><label for="fname">First name:</label><br>
     <input type="text" id="fname" value="Junyi"><br>
@@ -36,6 +41,31 @@
     <input type="submit" value="Done">
 </form>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 </body>
+
+<script>
+
+    mybutton = document.getElementById("myBtn");
+    
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    
+    function topFunction() {
+      document.body.scrollTop = 0; 
+      document.documentElement.scrollTop = 0; 
+    }
+    
+    </script>
 
 </html>
